@@ -1,22 +1,22 @@
 const form = document.getElementById("regForm"), pass = document.getElementById("pass"), bar = document.getElementById("bar");
 
-// 1. Show / Hide Password
+
 document.getElementById("toggle").onclick = function() {
   pass.type = pass.type === "password" ? "text" : "password";
   this.innerText = pass.type === "password" ? "Show" : "Hide";
 };
 
-// 2. Password Strength Indicator
+
 pass.oninput = () => {
   let v = pass.value, score = /[A-Z]/.test(v) + /[a-z]/.test(v) + /[0-9]/.test(v) + /[!@$%^&*+#+]/.test(v) + (v.length >= 6);
   bar.style.width = v ? (score <= 2 ? "33%" : score <= 4 ? "66%" : "100%") : "0%";
   bar.style.background = score <= 2 ? "#d93025" : score <= 4 ? "#f4b400" : "#0f9d58";
 };
 
-// 3. Form Validation
+
 form.onsubmit = (e) => {
   e.preventDefault();
-  document.querySelectorAll(".error").forEach(s => s.innerText = ""); // Reset errors
+  document.querySelectorAll(".error").forEach(s => s.innerText = ""); 
 
   const fN = document.getElementById("fName").value.trim(), lN = document.getElementById("lName").value.trim();
   const em = document.getElementById("email").value.trim(), re = document.getElementById("rePass").value.trim();
