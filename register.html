@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Short Register Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="form-container">
+  <h2>Register Form</h2>
+  <form id="regForm">
+    <div class="input-group"><label>First Name:</label><input type="text" id="fName"><span id="fNameErr" class="error"></span></div>
+    <div class="input-group"><label>Last Name:</label><input type="text" id="lName"><span id="lNameErr" class="error"></span></div>
+    <div class="input-group"><label>Email:</label><input type="text" id="email"><span id="emailErr" class="error"></span></div>
+    
+    <div class="input-group">
+      <label>Password:</label>
+      <div style="position:relative;"><input type="password" id="pass"><span id="toggle" class="toggle">Show</span></div>
+      <div class="bar-bg"><div id="bar" class="bar"></div></div>
+      <span id="passErr" class="error"></span>
+    </div>
+
+    <div class="input-group"><label>Retype Password:</label><input type="password" id="rePass"><span id="rePassErr" class="error"></span></div>
+    <button type="submit">Register</button>
+  </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
